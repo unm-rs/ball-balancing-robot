@@ -65,8 +65,8 @@ As the robot has three arms, the platform can move in the x-axis, y-axis, and z-
 #### General Calculation Flow
 Input: orientation vector [a,b,c] + desired height [h] → Output: servo motor angles θ1​,θ2​,θ3​.
 Examples: 
-- [0, 0, 1] - to move the platform straight up
-- a = sin(5)cos(0), b = sin(5)sin(0), c = cos(5): [0.087, 0, 0.996] - to tilt the platform forward by 5 degrees
+- **[0, 0, 1]** - *to move the platform straight up*
+- a = sin(5)cos(0), b = sin(5)sin(0), c = cos(5): **[0.087, 0, 0.996]** - *to tilt the platform forward by 5 degrees*
 
 When we tilt the platform, the upper attachment points move to new positions in 3D space. Since the lower attachment points are fixed to the base, the question is: 
 ##### Where exactly should the middle joint C be located so that both links (l1 and l2) maintain their fixed lengths?  
@@ -75,4 +75,4 @@ This condition is essential because the robot’s arms are rigid mechanical link
 ##### Servo Angle Calculation: 
 After solving the geometry, the algorithm knows where the middle joint (C1) needs to be in 3D space. The base joint (B1) is fixed, and the servo is at B1. To reach C1 with the bottom link, the servo must rotate to a certain angle θ1.
 Mathematically, the code does:
-θ1​=π/2 ​− arctan​ ( (sqrt(C1x^2 + C1y^2) - lb)/C1z)
+θ1​ = *π/2 ​− arctan​ ( (sqrt(C1x^2 + C1y^2) - lb)/C1z)*
