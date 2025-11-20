@@ -22,6 +22,8 @@ A Raspberry Pi 4-powered ball-balancing robot that combines inverse kinematics, 
 
 ## Materials
 
-| Number | Name |
-| --- | --- |
-| 1 | what the sigma |
+| Number | Name | Quantity |
+| --- | --- | --- |
+| 1 | Raspberry Pi 4 4GB | 1 |
+| 2 | Raspberry Pi Camera Module V2 | 1 |
+| 3 | 30$kg*cm$ Torque Servo Motor
