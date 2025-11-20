@@ -26,4 +26,24 @@ A Raspberry Pi 4-powered ball-balancing robot that combines inverse kinematics, 
 | --- | --- | --- |
 | 1 | Raspberry Pi 4 4GB | 1 |
 | 2 | Raspberry Pi Camera Module V2 | 1 |
-| 3 | 30$kg*cm$ Torque Servo Motor
+| 3 | 30kgcm Torque Servo Motor | 3 |
+| 4 | 6mm Male Rod End Bearing | 3 |
+| 5 | M2 x 8 Cap Head Socket Screw | 6 |
+| 6 | M2.5 x 10 Cap Head Socket Screw | 4 |
+| 7 | M3 x 5 Socket Head Screw | 18 |
+| 8 | M3 x 10 Socket Head Screw| 3 |
+| 9 | M3 x 15 Socket Head Screw | 1 |
+| 10 | M3 x 20 Socket Head Screw | 3 |
+| 11 | M4 x 20 Socket Head Screw | 6 |
+| 12 | M4 x 30 Socket Head Screw | 6 |
+| 13 | M5 x 30 Socket Head Screw | 3 |
+| 14 | M3 Hex Nut | 9 |
+| 15 | M4 Hex Nut | 12 |
+| 16 | M3 x 10 Standoff | 9 |
+| 17 | M3 x 15 Standoff | 6 |
+| 18 | M3 x 20 Standoff | 3 |
+| 19 | 4-10-4 Bearing | 6 |
+| 20 | Rubber Foot 12x9x9 | 3 |
+| 21 | MM5 Washer | 6 |
+
+
