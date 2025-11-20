@@ -23,3 +23,4 @@ A Raspberry Pi 4-powered ball-balancing robot that combines inverse kinematics, 
 ## Materials
 
 | Number | Name |
+| 1 | what the sigma |
