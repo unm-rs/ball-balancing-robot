@@ -46,4 +46,10 @@ A Raspberry Pi 4-powered ball-balancing robot that combines inverse kinematics, 
 | 20 | Rubber Foot 12x9x9 | 3 |
 | 21 | MM5 Washer | 6 |
 
+## Algorithm Explanation
 
+#### Inverse Kinematics
+- the mathematical process of calculating the joint angles of a robot's limb to reach specific position and orientation in space.
+
+
+To achieve a precise tilt of the platform on the ball-balancing robot, inverse kinematics is done to calculate the angles that each servo should be set to.
