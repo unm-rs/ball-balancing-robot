@@ -72,7 +72,7 @@ When we tilt the platform, the upper attachment points move to new positions in 
 ##### Where exactly should the middle joint C be located so that both links (l1 and l2) maintain their fixed lengths?  
 This condition is essential because the robot’s arms are rigid mechanical links — they cannot stretch or shrink. By fixing their lengths, we ensure that the calculated joint positions are physically possible for the real robot, so the motion derived from the inverse kinematics corresponds exactly to what the hardware can achieve.
 
-##### Servo Angle Calculation: 
+### Servo Angle Calculation: 
 After solving the geometry, the algorithm knows where the middle joint (C1) needs to be in 3D space. The base joint (B1) is fixed, and the servo is at B1. To reach C1 with the bottom link, the servo must rotate to a certain angle θ1.
 Mathematically, the code does:
 θ1​ = *π/2 ​− arctan​ ( (sqrt(C1x^2 + C1y^2) - lb)/C1z)*
