@@ -19,3 +19,7 @@ A Raspberry Pi 4-powered ball-balancing robot that combines inverse kinematics, 
 3. **PID controllers** compute the required tilt angles to reduce the error between the current and target position.
 4. **Inverse kinematics** calculates the angle of the servo motors to be converted to the desired tilt angles.
 5. **Servos** move the joints and tilts the platform accordingly.
+
+## Materials
+
+| Number | Name |
