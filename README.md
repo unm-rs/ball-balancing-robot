@@ -69,7 +69,7 @@ Examples:
 - a = sin(5)cos(0), b = sin(5)sin(0), c = cos(5): [0.087, 0, 0.996] - to tilt the platform forward by 5 degrees
 
 When we tilt the platform, the upper attachment points move to new positions in 3D space. Since the lower attachment points are fixed to the base, the question is: 
-- Where exactly should the middle joint C be located so that both links (l1 and l2) maintain their fixed lengths?  
+###### Where exactly should the middle joint C be located so that both links (l1 and l2) maintain their fixed lengths?  
 This condition is essential because the robot’s arms are rigid mechanical links — they cannot stretch or shrink. By fixing their lengths, we ensure that the calculated joint positions are physically possible for the real robot, so the motion derived from the inverse kinematics corresponds exactly to what the hardware can achieve.
 
 ##### Servo Angle Calculation: 
