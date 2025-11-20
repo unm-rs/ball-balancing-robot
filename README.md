@@ -48,8 +48,34 @@ A Raspberry Pi 4-powered ball-balancing robot that combines inverse kinematics, 
 
 ## Algorithm Explanation
 
-#### Inverse Kinematics
-- the mathematical process of calculating the joint angles of a robot's limb to reach specific position and orientation in space.
+### Inverse Kinematics
+- The mathematical process of calculating the joint angles of a robot's limb to reach specific position and orientation in space.
+- To achieve a precise tilt of the platform on the ball-balancing robot, inverse kinematics is done to calculate the angles that each servo should be set to.
+
+#### Geometry of the Robot
+The robot consists of **three** arms equally spaced at 120 degrees, which connects the top platform to the bottom base.
+
+#### Inverse Kinematics Calculations
+As the robot has three arms, the platform can move in the x-axis, y-axis, and z-axis directions. 
+
+- The orientation Vector [a,b,c] represent the x,y, and z components.
+- These three vectors form a unit length of 1: a^2 + b^2 + c^2 = 1.
+- This vector ensures that the algorithm knows exactly the rotation of the platform in 3D space
+
+##### General Calculation Flow
+Input: orientation vector [a,b,c] + desired height [h] → Output: servo motor angles θ1​,θ2​,θ3​.
+Examples: 
+- [0, 0, 1] - to move the platform straight up
+- a = sin(5)cos(0), b = sin(5)sin(0), c = cos(5)
+	[a,b,c] = [0.087, 0, 0.996] - to tilt the platform forward by 5 degrees
+
+Solve top joint positions: 
+If you command “ Tile the platform by 5 degrees forward and raise it by 2 cm”, the computer does not directly know where the coordinates of each top connection point on the top platform should be in space. The inverse kinematics solver must calculate their new coordinates (x, y, z).
+Compute Middle Joint Coordinates: 
+When we tilt the top platform, the attachment points at the top move to new positions in 3D space. The bottom attachment points are fixed to the base. Now the question is: Where exactly should the middle joint C be located so that both links (l1 and l2) maintain their fixed lengths? This condition is essential because the robot’s arms are rigid mechanical links — they cannot stretch or shrink. By fixing their lengths, we ensure that the calculated joint positions are physically possible for the real robot, so the motion derived from the inverse kinematics corresponds exactly to what the hardware can achieve. 
 
 
-To achieve a precise tilt of the platform on the ball-balancing robot, inverse kinematics is done to calculate the angles that each servo should be set to.
+Calculate Servo Angles: 
+After solving the geometry, the algorithm knows where the middle joint (C1) needs to be in 3D space. The base joint (B1) is fixed, and the servo is at B1. To reach C1 with the bottom link, the servo must rotate to a certain angle θ1.
+Mathematically, the code does:
+θ1​=π/2 ​− arctan​ ( (sqrt(C1x^2 + C1y^2) - lb)/C1z)
